@@ -27,7 +27,7 @@ reg = linear_model.BayesianRidge()
 reg.fit(X, Y)
 
 model_name = "MyTestModel"
-model_persistence.save(reg, model_name, ["coef_", "intercept_"])
+model_persistence.save(reg, model_name)
 
 print(reg.predict([[1, 0.]]))
 
