@@ -1,0 +1,4 @@
+= sklearn-neo4j: Save your scikit-learn models in Neo4j
+
+This is a WIP project for saving scikit-learn models to Neo4j.
+
