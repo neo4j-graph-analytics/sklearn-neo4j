@@ -13,7 +13,7 @@ class ModelPersistence:
     )
     """
 
-    def save(self, model, name, fields):
+    def save(self, model, name):
         params = {
             "modelName": name,
             "module": model.__module__,
@@ -21,6 +21,9 @@ class ModelPersistence:
             "fields": {}
         }
         attrs = params["fields"]
+
+        fields = model.__dict__.keys()
+
         for field in fields:
             raw_value = getattr(model, field)
             coerced_value = raw_value

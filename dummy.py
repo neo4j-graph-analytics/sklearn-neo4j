@@ -12,8 +12,11 @@ Y = [0., 1., 2., 3.]
 reg = linear_model.BayesianRidge()
 reg.fit(X, Y)
 
-model_name = "{0}-{1}".format(reg.__class__.__name__, int(datetime.datetime.timestamp(datetime.datetime.now())))
-model_persistence.save(reg, model_name, ["coef_", "intercept_"])
+# model_name = "{0}-{1}".format(reg.__class__.__name__, int(datetime.datetime.timestamp(datetime.datetime.now())))
+
+model_name = "MarksTestDummy"
+
+model_persistence.save(reg, model_name)
 
 print(reg.predict([[1, 0.]]))
 
