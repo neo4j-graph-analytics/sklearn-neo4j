@@ -12,7 +12,8 @@ pip install git+https://github.com/neo4j-graph-analytics/sklearn-neo4j.git#egg=s
 
 Here's a simple example showing how to save and load a BayesianRidge model.
 
-```
+[source,python]
+----
 from neo4j.v1 import GraphDatabase, basic_auth
 from sklearn import linear_model
 
@@ -32,5 +33,4 @@ print(reg.predict([[1, 0.]]))
 
 new_reg = model_persistence.load(model_name)
 print(new_reg.predict([[1, 0.]]))
-
-```
+----
