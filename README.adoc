@@ -2,3 +2,16 @@
 
 This is a WIP project for saving scikit-learn models to Neo4j.
 
+You can install it using the following command:
+
+```
+pip install git+https://github.com/neo4j-graph-analytics/sklearn-neo4j.git#egg=sklearn-neo4j
+```
+
+== How do I use it?
+
+Here's a simple example showing how to save and load a BayesianRidge model.
+
+```
+include::dummy.py[]
+```
